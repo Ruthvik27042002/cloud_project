@@ -24,7 +24,7 @@ class Dbhandler {
         $this->conn = mysqli_init();
 
         // Set SSL options with the correct path to the CA certificate
-        mysqli_ssl_set($this->conn, NULL, NULL, "C:/Users/ruthv/Documents/amrita documents/sem7/cloudcomputing/Project/db/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+        mysqli_ssl_set($this->conn, NULL, NULL, "../DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 
         // Establish the connection with SSL options
         if (!$this->conn->real_connect($this->host, $this->user, $this->pass, $this->db, $this->port, NULL, MYSQLI_CLIENT_SSL)) {
@@ -46,7 +46,7 @@ class Dbhandler {
         $this->conn = mysqli_init();
 
         // Set SSL options with the correct path to the CA certificate
-        mysqli_ssl_set($this->conn, NULL, NULL, "C:/Users/ruthv/Documents/amrita documents/sem7/cloudcomputing/Project/db/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+        mysqli_ssl_set($this->conn, NULL, NULL, "../DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 
         // Establish the connection with SSL options
         if (!$this->conn->real_connect($host, $user, $pass, $db, $port, NULL, MYSQLI_CLIENT_SSL)) {
